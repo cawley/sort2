@@ -1,0 +1,27 @@
+public class Board{
+    private int[][] board;
+    private int x;
+    private int y;
+
+    private int bQuant; //bomb quantity
+    private int[][] arDim; // array dimensions
+
+    public Board(int[] board, int[][] a, int x, int y, int b){
+         x=x;
+         y=y;
+         b = bQuant;
+         a = arDim;
+        board = board; 
+
+    }
+    public int[][] board(){
+        int[][] a = new int[arDim[0][0]][arDim[0][1]];
+        for(int i = 0; i < a.length; i++){
+          for(int j = 0; j < a[i].length; j++){
+            a[i][j] = 0;
+            }
+          }
+            
+        return a;
+    }
+}
