@@ -1,0 +1,35 @@
+public class MergeSort{
+  
+  public int[] swap(int a, int b){
+    int[] c = {a,b};
+    int[] d = {b,a};
+    if(a > b){
+      return c;
+    }
+    else{
+      return d;
+    }
+  }
+  
+  public int[] split(int[] a){  
+    int[] b = new int[a.length/2];  
+    if(a.length == 2){
+      return swap(a[0], a[1]);
+    }
+    return split(b); 
+  }
+  
+  public int sort(int[] c){
+    c = split(c);
+    for(int i = 0; i < c.length; i++){
+      if(Integer.compare(c[0],c[1])>0){
+        
+      }
+    }
+    
+  }
+
+  public static void main(String[] args){
+    
+  }
+}
