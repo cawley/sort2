@@ -1,0 +1,24 @@
+import java.util.*;
+public class InsertionSort{
+    public void sort(int[] a) { 
+      for (int i = 0; i < a.length; i++) { 
+            int c = a[i]; //static
+            int j = i - 1; // needs to be a value, not variable for i-1 as the element at i-1 (j) needs to decrement with i as it compares
+            while (j >= 0 && a[j] > c) { 
+                a[j+1] = a[j]; 
+                j--; 
+              System.out.println(Arrays.toString(a));// compare and swap c through array
+            } 
+            a[j+1] = c;  
+        } 
+    } 
+    public static void main(String args[]) {
+     int[] a = new int[10];
+      for(int i = 0; i < a.length; i++){
+        System.out.println("enter the " + i + " number you want sorted");
+        a[i] = new Scanner(System.in).nextInt();
+      }
+        new InsertionSort().sort(a);  
+        System.out.println(Arrays.toString(a)); 
+    } 
+}
